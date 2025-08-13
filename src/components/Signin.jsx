@@ -23,7 +23,7 @@ const Signin = () => {
       formData.append("password", password);
 
       const response = await axios.post(
-        "http://Peter10.pythonanywhere.com/api/signin",
+        "http://peter10.pythonanywhere.com/api/signin",
         formData
       );
       
