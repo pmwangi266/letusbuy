@@ -1,0 +1,260 @@
+body, .landing-page {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0c0c0c;
+  color: #080808;
+}
+
+/* Modern hero header styling */
+.hero {
+  padding: 0.03rem 0;
+  background: linear-gradient(135deg, #acaf02 0%, #acaf02 100%);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 6px rgb(238, 236, 236);
+  margin-bottom: 1rem;
+}
+
+.hero-center {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #080808;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 0.95rem;
+  color: #070708;
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    padding: 32px 10px 24px 10px;
+    border-radius: 8px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #be9f03;
+}
+
+.centered-text {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  border: 1px solid #918703;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #020201;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #aaa700;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: #eeeddc;
+}
+
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #070808;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  color: #bbb804;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #aa9f00;
+  color: rgb(7, 7, 7);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.footer {
+  background-color: #9c9309;
+  color: rgb(10, 5, 5);
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+
+
+
+/* Carousel and Category Section */
+.carousel-category-section {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.compact-category-sidebar {
+  width: 250px;
+  background: #bdb003;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.carousel-container {
+  flex: 1;
+}
+
+/* Compact Category Sidebar */
+.sidebar-title {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-item {
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.category-item:hover {
+  background: #e9ecef;
+}
+
+.category-item.active {
+  background: #007bff;
+  color: white;
+}
+
+/* Mobile Toggle Button */
+.mobile-category-toggle {
+  display: none;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .carousel-category-section {
+    flex-direction: column;
+  }
+  
+  .compact-category-sidebar {
+    width: 100%;
+    display: none;
+  }
+  
+  .compact-category-sidebar.mobile-visible {
+    display: block;
+  }
+  
+  .mobile-category-toggle {
+    display: block;
+  }
+}
+
+/* View More Button Styles */
+.view-more-btn {
+  background: #d6c804;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.view-more-btn:hover {
+  background: #020202;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(214, 183, 3, 0.87);
+}
+
+.product-card {
+  position: relative;
+  padding-bottom: 50px; /* Make space for the button */
+}
+
+/* If you want the button at the bottom of each card */
+.product-card .view-more-btn {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  width: calc(100% - 30px);
+}

@@ -1,0 +1,115 @@
+/* Privacy Policy Page Styles */
+.privacy-page {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
+  background: linear-gradient(135deg, #080808 0%, #050504 100%);
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.privacy-content-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  margin: 0 20px;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.privacy-header {
+  text-align: center;
+  padding: 60px 0 40px;
+  background: linear-gradient(135deg, #080808 0%, #d4c70d 100%);
+  margin-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.privacy-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.brand {
+  color: #d4c70d;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  font-weight: 300;
+}
+
+.privacy-section {
+  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  color: #d4c70d;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #d4c70d;
+}
+
+.section-content p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+}
+
+.privacy-list {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.privacy-list li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .privacy-header {
+    padding: 40px 0 30px;
+  }
+  
+  .privacy-header h1 {
+    font-size: 2rem;
+  }
+  
+  .privacy-section {
+    padding: 20px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section-content p, .privacy-list li {
+    font-size: 1rem;
+  }
+}

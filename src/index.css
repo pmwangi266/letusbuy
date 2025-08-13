@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+:root {
+  --darkYellow: #FFD700; /* Gold color - you can adjust this */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.bg-darkYellow {
+  background-color: var(--darkYellow);
+}
+
+.text-darkYellow {
+  color: var(--darkYellow);
+}
+
+.border-darkYellow {
+  border-color: var(--darkYellow);
+}
+
+.hover\:text-darkYellow:hover {
+  color: var(--darkYellow);
+}
+
+.hover\:bg-darkYellow:hover {
+  background-color: var(--darkYellow);
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+ 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
