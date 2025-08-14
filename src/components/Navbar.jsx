@@ -204,6 +204,7 @@ const Navbar = ({ cartCount }) => {
                       Signup
                     </Link>
                   </li>
+                  <br/>
                   <li className="nav-item">
                     <Link
                       to="/Signin"

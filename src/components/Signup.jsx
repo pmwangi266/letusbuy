@@ -15,6 +15,8 @@ const Signup = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  const API_BASE_URL = "https://peter10.pythonanywhere.com/api";
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -30,20 +32,18 @@ const Signup = () => {
     setSuccess('');
 
     try {
-      const formDataObj = new FormData();
-      formDataObj.append('username', formData.username);
-      formDataObj.append('email', formData.email);
-      formDataObj.append('password', formData.password);
-      formDataObj.append('phone', formData.phone);
-
       const response = await axios.post(
-        "http://peter10.pythonanywhere.com/api/signup",
-        formDataObj
+        `${API_BASE_URL}/signup`,
+        formData,
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
       );
       
       setSuccess(response.data.Success || 'Account created successfully!');
       
-      // Redirect to login after 2 seconds
       setTimeout(() => {
         navigate('/signin');
       }, 2000);
