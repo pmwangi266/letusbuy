@@ -11,8 +11,6 @@ const Signin = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const API_BASE_URL = "https://peter10.pythonanywhere.com/api";
-
   const submit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -20,22 +18,23 @@ const Signin = () => {
     setSuccess('');
 
     try {
+      const formData = new FormData();
+      formData.append("email", email);
+      formData.append("password", password);
+
       const response = await axios.post(
-        `${API_BASE_URL}/signin`,
-        { email, password },
-        {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        }
+        "http://peter10.pythonanywhere.com/api/signin",
+        formData
       );
       
-      setSuccess(response.data.Message || "Login successful!");
+      setSuccess(response.data.Message);
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
       
+      // Redirect to dashboard or home after 1.5 seconds with page reload
       setTimeout(() => {
         navigate('/');
+        window.location.reload(); // This will force a full page refresh
       }, 1500);
     } catch (error) {
       setError(error.response?.data?.Message || "Login failed. Please try again.");
