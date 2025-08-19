@@ -37,7 +37,7 @@ const Signup = () => {
       formDataObj.append('phone', formData.phone);
 
       const response = await axios.post(
-        "http://peter10.pythonanywhere.com/api/signup",
+        "https://peter10.pythonanywhere.com/api/signup",
         formDataObj
       );
       
