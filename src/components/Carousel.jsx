@@ -15,27 +15,49 @@ const Carousel = () => {
     autoplaySpeed: 7000,
     arrows: true,
     fade: true,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          dots: true,
+          autoplaySpeed: 5000,
+        }
+      }
+    ]
   };
 
-  // Image paths relative to public folder
   const carouselItems = [
     {
       id: 1,
-      title: "Exclusive Affiliate Deals  ",
+      title: "Exclusive Affiliate Deals",
       description: "Get special discounts through our trusted affiliate partners - quality products at better prices.",
       image: "/images/affiliate.jpg"
     },
     {
       id: 2,
       title: "Smart Shopping Decisions",
-      description: "We compare top products side-by-side to help you choose the best value for your money. ",
+      description: "We compare top products side-by-side to help you choose the best value for your money.",
       image: "/images/compare.jpg"
     },
     {
       id: 3,
-      title: "Honest Product Reviews  ",
-      description: " Our team tests products thoroughly to bring you unbiased reviews and recommendations.",
+      title: "Honest Product Reviews",
+      description: "Our team tests products thoroughly to bring you unbiased reviews and recommendations.",
       image: "/images/review.jpg"
     },
     {
