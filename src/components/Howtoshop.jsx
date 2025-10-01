@@ -64,8 +64,7 @@ const HowToShop = () => {
                 <h3>Step 3: Click the Product Link</h3>
               </div>
               <div className="step-content">
-                <p>When you're ready, click the button that says something like:</p>
-                <p className="link-example">🔗 Buy on Amazon or 🔗 Shop on Jumia</p>
+                <p>When you're ready, click the button that says Buy Now</p>
                 <p>This will redirect you to the official product page on the seller's website, where you can complete your purchase securely.</p>
                 <div className="note">
                   <p>🛡️ <strong>Note:</strong> Let Us Buy 365 never collects your payment details. All payments are processed by the official online store.</p>
